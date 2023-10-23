@@ -17,17 +17,18 @@ import java.util.Map;
 public class CrmService {
 
     @Autowired
-    RestTemplate restTemplate;
+    private RestTemplate restTemplate;
 
     @Autowired
-    ObjectMapper objectMapper;
+    private ObjectMapper objectMapper;
+    private String bearerToken;
 
 //    @Value("${crmBaseUrl}")
-    private String crmBaseUrl = "https://example1.hookah.work/api/login";
+    private String crmBaseUrl = "https://infernolounge3.hookah.work/api/login";
 //    @Value("${username}")
-    private String username = "nikaca8015@tenjb.com";
+    private String username = "ninon11197@vinthao.com";
 //    @Value("${password}")
-    private String password = "2qtFQTJA";
+    private String password = "GaaKfAXb";
 
     public String authenticateAndGetBearerToken() {
         System.out.println("Authentication method called");
@@ -64,5 +65,13 @@ public class CrmService {
             throw new RuntimeException("Token can not be obtained");
         }
         return (String) jsonMap.get("auth_token");
+    }
+
+    public String getBearerToken() {
+        if(bearerToken == null) {
+            return bearerToken = authenticateAndGetBearerToken();
+        } else {
+            return bearerToken;
+        }
     }
 }

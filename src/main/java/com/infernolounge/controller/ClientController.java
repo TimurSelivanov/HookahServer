@@ -27,7 +27,7 @@ public class ClientController {
                                              @RequestParam(defaultValue = "20") int perPage) {
         //get the header token
         //TODO make secure implementation of token storing
-        String bearerToken = crmService.authenticateAndGetBearerToken();
+        String bearerToken = crmService.getBearerToken();
         System.out.println("Token passed " + bearerToken);
         //create httpHeaders entity
         HttpHeaders httpHeaders = new HttpHeaders();
