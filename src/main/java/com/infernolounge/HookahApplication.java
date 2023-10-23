@@ -1,4 +1,4 @@
-package com.hookah;
+package com.infernolounge;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.boot.SpringApplication;

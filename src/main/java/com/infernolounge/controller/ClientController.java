@@ -1,6 +1,6 @@
-package com.hookah.controller;
+package com.infernolounge.controller;
 
-import com.hookah.service.CrmService;
+import com.infernolounge.service.CrmService;
 import org.springframework.http.*;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;

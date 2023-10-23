@@ -1,4 +1,4 @@
-package com.hookah.config.security;
+package com.infernolounge.config.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
